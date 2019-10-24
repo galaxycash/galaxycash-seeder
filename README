@@ -1,7 +1,7 @@
 galaxycash-seeder
 ===============
 
-galaxycash-seeder is a crawler for the Peercoin network, which exposes a list
+galaxycash-seeder is a crawler for the GalaxyCash network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
@@ -51,6 +51,6 @@ sudo setcap 'cap_net_bind_service=+ep' ./dnsseed
 RUNNING in Docker
 -----------------
 
-docker pull peerchemist/galaxycash-seeder
+docker pull galaxycash/galaxycash-seeder
 
 docker run -it galaxycash-seeder --testnet -h $DOMAIN_NAME -n $IP -t 32
