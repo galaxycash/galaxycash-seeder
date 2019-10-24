@@ -34,7 +34,7 @@ dnsseed.example.com.   86400    IN      NS     vps.example.com.
 
 On the system vps.example.com, you can now run dnsseed:
 
-./dnsseed -h dnsseed.example.com -n vps.example.com
+./galaxycash-seeder -h dnsseed.example.com -n vps.example.com
 
 If you want the DNS server to report SOA records, please provide an
 e-mailadres (with the @ part replaced by .) using -m.
@@ -47,7 +47,7 @@ Typically, you'll need root privileges to listen to port 53 (name service).
 One solution is using setcap (Linux only) to give the executable permission
 to use a privileged port:
 
-sudo setcap 'cap_net_bind_service=+ep' ./dnsseed
+sudo setcap 'cap_net_bind_service=+ep' ./galaxycash-seeder
 
 RUNNING in Docker
 -----------------
