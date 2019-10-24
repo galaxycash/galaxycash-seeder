@@ -1,0 +1,19 @@
+# /etc/systemd/system/tgdnsseed.service
+
+[Unit]
+Description=GalaxyCash dns seed service - testnet
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/galaxycash-seeder -h $DOMAIN_NAME -n $IP_ADDRESS -t 32 -testnet
+WorkingDirectory=/var/lib/gdnsseed-testnet
+KillMode=process
+Restart=always
+## security
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

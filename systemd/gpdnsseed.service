@@ -1,0 +1,19 @@
+# /etc/systemd/system/gdnsseed.service
+
+[Unit]
+Description=GalaxyCash dns seed service - mainnet
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/galaxycash-seeder -h $DOMAIN_NAME -n $IP_ADDRESS -t 32
+WorkingDirectory=/var/lib/gdnsseed-mainnet
+KillMode=process
+Restart=always
+## security
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
