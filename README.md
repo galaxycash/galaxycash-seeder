@@ -1,0 +1,1 @@
+# galaxycash-seeder
