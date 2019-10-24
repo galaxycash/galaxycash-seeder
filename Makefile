@@ -11,3 +11,5 @@ dns.o: dns.c
 	gcc -pthread -std=c99 $(CXXFLAGS) dns.c -c -o dns.o
 
 %.o: %.cpp
+
+install: cp -f galaxycash-seeder /usr/bin
