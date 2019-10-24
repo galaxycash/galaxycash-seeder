@@ -12,4 +12,5 @@ dns.o: dns.c
 
 %.o: %.cpp
 
-install: cp -f galaxycash-seeder /usr/bin
+install: galaxycash-seeder 
+	cp -f galaxycash-seeder /usr/bin
