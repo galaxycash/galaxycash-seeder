@@ -377,7 +377,7 @@ static const string testnet_seeds[] = {"tseed.galaxy-hub.online",
 static const string *seeds = mainnet_seeds;
 
 extern "C" void *ThreadSeeder(void *) {
-  db.Add(CService("127.0.0.1", fTestNet ? 9903 : 9901), true);
+  db.Add(CService("127.0.0.1", fTestNet ? 17604 : 7604), true);
 
   do {
     for (int i = 0; seeds[i] != ""; i++) {
